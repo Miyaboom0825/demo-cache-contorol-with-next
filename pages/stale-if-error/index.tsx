@@ -32,7 +32,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   const date = new Date().toString();
   const cacheControl = {
     key: "Cache-Control",
-    value: "max-age=0, stale-if-error=60",
+    value: "max-age=0, s-maxage=60, stale-if-error=60",
   };
 
   context.res.setHeader(cacheControl.key, cacheControl.value);
